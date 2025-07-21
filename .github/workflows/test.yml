@@ -39,8 +39,8 @@ jobs:
       
       - name: Install dependencies
         env:
-          #DATABASE_URL: postgresql://user:password@localhost:5432/mytestdb
-          DATABASE_URL=postgresql://user:password@postgres:5432/mytestdb
+          DATABASE_URL: postgresql://user:password@localhost:5432/mytestdb
+          #DATABASE_URL=postgresql://user:password@postgres:5432/mytestdb
           
 
         run: |
@@ -52,8 +52,8 @@ jobs:
       
       - name: Run tests
         env:
-          #DATABASE_URL: postgresql://user:password@localhost:5432/mytestdb
-          DATABASE_URL=postgresql://user:password@postgres:5432/mytestdb
+          DATABASE_URL: postgresql://user:password@localhost:5432/mytestdb
+          #DATABASE_URL=postgresql://user:password@postgres:5432/mytestdb
 
 
         run: |
