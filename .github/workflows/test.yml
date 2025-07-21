@@ -41,6 +41,7 @@ jobs:
         env:
           #DATABASE_URL: postgresql://user:password@localhost:5432/mytestdb
           DATABASE_URL=postgresql://user:password@postgres:5432/mytestdb
+          
 
         run: |
           python -m venv venv
