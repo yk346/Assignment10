@@ -3,7 +3,7 @@ version: '3.8'
 services:
   web:
     build: .
-    container_name: fastapi_calculator
+    container_name: fastapi_calculator2
     ports:
       - "8000:8000"
     volumes:
@@ -22,7 +22,7 @@ services:
 
   db:
     image: postgres
-    container_name: postgres_db
+    container_name: postgres_db1
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
