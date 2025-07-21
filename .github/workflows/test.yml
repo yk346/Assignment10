@@ -39,7 +39,9 @@ jobs:
       
       - name: Install dependencies
         env:
-          DATABASE_URL: postgresql://user:password@localhost:5432/mytestdb
+          #DATABASE_URL: postgresql://user:password@localhost:5432/mytestdb
+          DATABASE_URL=postgresql://user:password@postgres:5432/mytestdb
+
         run: |
           python -m venv venv
           source venv/bin/activate
@@ -49,7 +51,10 @@ jobs:
       
       - name: Run tests
         env:
-          DATABASE_URL: postgresql://user:password@localhost:5432/mytestdb
+          #DATABASE_URL: postgresql://user:password@localhost:5432/mytestdb
+          DATABASE_URL=postgresql://user:password@postgres:5432/mytestdb
+
+
         run: |
           source venv/bin/activate
           
@@ -99,8 +104,8 @@ jobs:
         with:
           push: true
           tags: |
-            kaw393939/601_module9:latest
-            kaw393939/601_module9:${{ github.sha }}
+            yk346/601_module10:latest
+            yk346/601_module10:${{ github.sha }}
           platforms: linux/amd64,linux/arm64
-          cache-from: type=registry,ref=kaw393939/601_module9:cache
+          cache-from: type=registry,ref=yk346/601_module10:cache
           cache-to: type=inline,mode=max
